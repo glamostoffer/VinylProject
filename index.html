@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="vinyl.png">
+  <link rel="stylesheet" href="css/navigation.css">
+  <style>
+    html {
+      background-color: #f5f2f2;
+    }
+
+    header {
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .header__bg {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(#49ecd3, #ff8800);
+      transform: skewY(-6deg);
+      transform-origin: top left;
+    }
+
+    h1 {
+      margin: 2%;
+      padding: 0;
+      font: 44px "Goudy Old Style";
+      text-align: left;
+    }
+
+    header h1 {
+      position: relative;
+      color: white;
+    }
+    section h1 {
+      position: relative;
+      text-align: right;
+      margin-top: -5%;
+    }
+    ul {
+      font: 14px Verdana, Geneva, sans-serif;
+      text-align: justify;
+
+      /* Обнуляем для родителя*/
+      line-height: 0;
+      font-size: 1px; /* 1px для Opera */
+
+      /* Лекарство для IE6-7*/
+      text-justify: newspaper;
+      zoom:1;
+
+      /* Включаем в работу последнюю строку*/
+      text-align-last: justify;
+    }
+    img:hover {
+      transform: scale(1.18, 1.18);
+    }
+    div.demo {
+      display: table;
+      width: 100%;
+      table-layout: fixed;    /* For cells of equal size */
+    }
+    div.demo span {
+      display: table-cell;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <section class="navigation">
+    <div class="nav_container">
+      <div class="logo">
+        <a href="index.html">STORE</a>
+      </div>
+      <nav>
+        <ul class="nav_list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="404.html">About</a></li>
+          <li><a href="#contacts">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+  <br>
+  <header>
+    <div class="header__bg"></div>
+    <h1>Musical store</h1>
+  </header>
+  <section>
+    <h1>New arrivals</h1>
+    <div class="demo">
+      <span><img src="img/dive_store.webp" alt="dive" width="300px"></span>
+      <span><img src="img/frances_the_mute85853049.webp" alt="frances" width="300px"></span>
+      <span><img src="img/welcome_to_my_world_store.webp" alt="welcome to my world" width="300px"></span>
+      <span><img src="img/back_to_the_woodlands_store.webp" alt="woodlands" width="300px"></span>
+    </div>
+  </section>
+  <section>
+    <div class="demo">
+      <span><img src="img/read_music_speak_spanish_store.webp" alt="read music" width="300px"></span>
+      <span><img src="img/louie_store.webp" alt="louie store" width="300px"></span>
+      <span><img src="img/denim_and_diamonds_vinyl_store.webp" alt="diamonds" width="300px"></span>
+      <span><img src="img/spark_store.webp" alt="spark" width="300px"></span>
+    </div>
+  </section>
+  <section id="contacts">
+
+  </section>
+
+  <!--<article>
+    <div class="header__bg"></div>
+    <h2 style="font-family: 'Goudy Old Style'">Musical store</h2>
+  </article>
+  <section>
+    <h2>New Arrivals</h2>
+  </section>-->
+</body>
+
+</html>
