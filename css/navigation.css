@@ -1,6 +1,6 @@
 .navigation {
   height: 70px;
-  background: #262626;
+  background: #1a1a1a;
 }
 .logo {
   position: absolute;
@@ -34,7 +34,7 @@ nav ul li a, nav ul li a:visited {
   display: block;
   padding: 0 20px;
   line-height: 70px;
-  background: #262626;
+  background: #1a1a1a;
   color: #ffffff;
   text-decoration: none;
 }

@@ -9,7 +9,46 @@
     html {
       background-color: #f5f2f2;
     }
-
+    .block {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      width: 300px;
+      height: 300px;
+      border: 20px solid #f1f1f1;
+    }
+    .block img {
+      display: block;
+      position: relative;
+      width: 300px;
+      height: 300px;
+    }
+    .block__text {
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 300px;
+      height: 300px;
+      background-color: #f5f2f2;
+      opacity: 0;
+      -webkit-transition: all 0.7s ease-in-out;
+      -moz-transition: all 0.7s ease-in-out;
+      -ms-transition: all 0.7s ease-in-out;
+      -o-transition: all 0.7s ease-in-out;
+      transition: all 0.7s ease-in-out;
+    }
+    .block:hover .block__text {
+      opacity: 1;
+    }
+    h3,
+    p {
+      text-align: center;
+    }
+    h3 {
+      margin-top: 50%;
+    }
     header {
       position: relative;
       height: 300px;
@@ -27,6 +66,7 @@
       background-image: linear-gradient(#49ecd3, #ff8800);
       transform: skewY(-6deg);
       transform-origin: top left;
+      z-index: 100;
     }
 
     h1 {
@@ -34,6 +74,7 @@
       padding: 0;
       font: 44px "Goudy Old Style";
       text-align: left;
+      z-index: 200;
     }
 
     header h1 {
@@ -46,12 +87,11 @@
       margin-top: -5%;
     }
     ul {
-      font: 14px Verdana, Geneva, sans-serif;
+      font: 14px Verdana, Arial, sans-serif;
       text-align: justify;
 
       /* Обнуляем для родителя*/
       line-height: 0;
-      font-size: 1px; /* 1px для Opera */
 
       /* Лекарство для IE6-7*/
       text-justify: newspaper;
@@ -60,8 +100,16 @@
       /* Включаем в работу последнюю строку*/
       text-align-last: justify;
     }
+    img {
+      margin: 1%;
+      padding: 1%;
+    }
     img:hover {
       transform: scale(1.18, 1.18);
+    }
+    .demo {
+      display: flex;
+      flex-wrap: wrap;
     }
     div.demo {
       display: table;
@@ -79,7 +127,7 @@
   <section class="navigation">
     <div class="nav_container">
       <div class="logo">
-        <a href="index.html">STORE</a>
+        <a href="index.html"><img src="Cartoons__Anime_Gundam_Artboard_28-512.webp" width="64"></a>
       </div>
       <nav>
         <ul class="nav_list">
@@ -90,26 +138,63 @@
       </nav>
     </div>
   </section>
-  <br>
   <header>
     <div class="header__bg"></div>
     <h1>Musical store</h1>
   </header>
   <section>
     <h1>New arrivals</h1>
-    <div class="demo">
-      <span><img src="img/dive_store.webp" alt="dive" width="300px"></span>
-      <span><img src="img/frances_the_mute85853049.webp" alt="frances" width="300px"></span>
-      <span><img src="img/welcome_to_my_world_store.webp" alt="welcome to my world" width="300px"></span>
-      <span><img src="img/back_to_the_woodlands_store.webp" alt="woodlands" width="300px"></span>
+    <div class="demo"><!--По-хорошему надо переделать без span чтобы нормально переносилось-->
+      <span><div class="block"><img src="img/dive_store.webp" alt="dive" width="300px">
+        <div class="block__text">
+          <h3>Dive</h3>
+          <p>Tycho</p>
+        </div>
+      </div></span>
+      <span><div class="block"><img src="img/frances_the_mute85853049.webp" alt="frances" width="300px">
+        <div class="block__text">
+          <h3>Frances</h3>
+          <p>The Mute</p>
+        </div>
+      </div></span>
+      <span><div class="block"><img src="img/welcome_to_my_world_store.webp" alt="welcome to my world" width="300px">
+        <div class="block__text">
+          <h3>Welcome To My World</h3>
+          <p>Daniel Johnston</p>
+        </div>
+      </div></span>
+      <span><div class="block"><img src="img/back_to_the_woodlands_store.webp" alt="woodlands" width="300px">
+        <div class="block__text">
+          <h3>Back to the Woodlands</h3>
+          <p>Ernest Hood</p>
+        </div>
+      </div></span>
     </div>
-  </section>
-  <section>
     <div class="demo">
-      <span><img src="img/read_music_speak_spanish_store.webp" alt="read music" width="300px"></span>
-      <span><img src="img/louie_store.webp" alt="louie store" width="300px"></span>
-      <span><img src="img/denim_and_diamonds_vinyl_store.webp" alt="diamonds" width="300px"></span>
-      <span><img src="img/spark_store.webp" alt="spark" width="300px"></span>
+      <span><div class="block"><img src="img/read_music_speak_spanish_store.webp" alt="read music" width="300px">
+        <div class="block__text">
+          <h3>Read Music</h3>
+          <p>Desaparedidos</p>
+        </div>
+      </div></span>
+      <span><div class="block"><img src="img/louie_store.webp" alt="louie store" width="300px">
+        <div class="block__text">
+          <h3>Louie</h3>
+          <p>Kenny Beats</p>
+        </div>
+      </div></span>
+      <span><div class="block"><img src="img/denim_and_diamonds_vinyl_store.webp" alt="diamonds" width="300px">
+        <div class="block__text">
+          <h3>Denim & Diamonds</h3>
+          <p>Nikki Lane</p>
+        </div>
+      </div></span>
+      <span><div class="block"><img src="img/spark_store.webp" alt="spark" width="300px">
+        <div class="block__text">
+          <h3>Spark</h3>
+          <p>Whitney</p>
+        </div>
+      </div></span>
     </div>
   </section>
   <section id="contacts">
